@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Gw-r1-JHE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialBold.ttf">
+            <string>Arial-BoldMT</string>
+        </array>
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+        </array>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--FIFA player of the year-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomDelegatesProtocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall" translatesAutoresizingMaskIntoConstraints="NO" id="KYH-Aq-0ZH">
+                                <rect key="frame" x="67.5" y="164" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="rQM-A2-IqV"/>
+                                    <constraint firstAttribute="width" constant="240" id="yca-vR-lYu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gl-xR-E9L">
+                                <rect key="frame" x="20" y="587" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.4169276341" green="0.42925007980000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="amk-ww-MAY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="pick a winner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickWinnerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igz-97-FLn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQB-cb-P2D">
+                                <rect key="frame" x="20" y="454" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K6S-6c-Bhz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Gl-xR-E9L" secondAttribute="bottom" constant="40" id="2Gh-Et-a4D"/>
+                            <constraint firstItem="KYH-Aq-0ZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3dS-H0-yXP"/>
+                            <constraint firstItem="VQB-cb-P2D" firstAttribute="top" secondItem="KYH-Aq-0ZH" secondAttribute="bottom" constant="50" id="Fjx-DN-OGT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VQB-cb-P2D" secondAttribute="trailing" constant="20" id="VlT-qq-VKN"/>
+                            <constraint firstItem="7Gl-xR-E9L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XyQ-Gq-MCT"/>
+                            <constraint firstItem="VQB-cb-P2D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aaM-Cd-mxP"/>
+                            <constraint firstItem="KYH-Aq-0ZH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="u5B-gK-MKJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Gl-xR-E9L" secondAttribute="trailing" constant="20" id="xuT-c5-PSF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FIFA player of the year" id="fc9-XK-dDa"/>
+                    <connections>
+                        <outlet property="playerImageView" destination="KYH-Aq-0ZH" id="BHi-yf-RgG"/>
+                        <outlet property="playerNameLabel" destination="VQB-cb-P2D" id="OnW-QA-WLp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.80000000000001" y="32.833583208395808"/>
+        </scene>
+        <!--Choose PlayerVC-->
+        <scene sceneID="BIa-68-dCG">
+            <objects>
+                <viewController storyboardIdentifier="pickPlayerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Z4-6y-MhJ" customClass="ChoosePlayerVC" customModule="CustomDelegatesProtocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EZo-fV-JNs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1M-N3-ROB">
+                                <rect key="frame" x="137.5" y="120" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lyx-Mk-EoC"/>
+                                    <constraint firstAttribute="width" constant="100" id="qPu-QB-zNr"/>
+                                </constraints>
+                                <state key="normal" image="mes"/>
+                                <connections>
+                                    <action selector="messiPicked:" destination="9Z4-6y-MhJ" eventType="touchUpInside" id="ZJv-wo-rs0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-q0-3xe">
+                                <rect key="frame" x="138" y="273" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sCl-hh-KeZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="vcV-xB-XkJ"/>
+                                </constraints>
+                                <state key="normal" image="ron"/>
+                                <connections>
+                                    <action selector="ronaldoPicked:" destination="9Z4-6y-MhJ" eventType="touchUpInside" id="mOI-lS-wQP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vote for your favorite player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-Dc-4jh">
+                                <rect key="frame" x="30" y="49" width="325" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xry-zN-p3q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Ai-q0-3xe" firstAttribute="centerX" secondItem="EZo-fV-JNs" secondAttribute="centerX" id="QrM-4f-rpj"/>
+                            <constraint firstItem="pUq-Dc-4jh" firstAttribute="leading" secondItem="7Yn-9h-bki" secondAttribute="leading" constant="30" id="Rz6-2n-XIR"/>
+                            <constraint firstItem="pUq-Dc-4jh" firstAttribute="top" secondItem="7Yn-9h-bki" secondAttribute="top" constant="29" id="Si3-2E-Cfq"/>
+                            <constraint firstItem="7Yn-9h-bki" firstAttribute="trailing" secondItem="pUq-Dc-4jh" secondAttribute="trailing" constant="20" id="Vcx-FP-XJJ"/>
+                            <constraint firstItem="Q1M-N3-ROB" firstAttribute="centerX" secondItem="EZo-fV-JNs" secondAttribute="centerX" id="YRA-Sk-7nB"/>
+                            <constraint firstItem="4Ai-q0-3xe" firstAttribute="top" secondItem="Q1M-N3-ROB" secondAttribute="bottom" constant="53" id="cIw-L6-8nQ"/>
+                            <constraint firstItem="Q1M-N3-ROB" firstAttribute="top" secondItem="7Yn-9h-bki" secondAttribute="top" constant="100" id="kry-Jc-qZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Yn-9h-bki"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vd-1x-mvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t2d-Dc-Ce6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Gw-r1-JHE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2pn-Tg-Iuh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y07-kL-5v5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3k1-ms-Hif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mes" width="590" height="350"/>
+        <image name="ron" width="299" height="168"/>
+        <image name="wall" width="900" height="1008"/>
+    </resources>
+</document>
